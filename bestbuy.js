@@ -1,11 +1,11 @@
 'use strict';
 
-// Best Buy Ajax 
+// Best Buy Ajax Call
 
 // $('#allStores, #bestBuyButton').on('click', function(e){
 const bestBuyCall = function(){
   if (selectedCategory === 'Movies' || selectedCategory === 'Games'){
-    // Hold the category when looking for in best buy
+    // Hold the category when looking for
     let searchCategory = '';
     if(selectedCategory === 'Movies'){
       searchCategory = 'Movie';
@@ -20,7 +20,7 @@ const bestBuyCall = function(){
       data:{
         apiKey: 'vrjst2v5zsgemp3jq44xwmz9',
         format: 'json',
-        pageSize: 10,
+        pageSize: 25,
         page: 1
       },
       success: function(data) {
@@ -31,13 +31,13 @@ const bestBuyCall = function(){
             let cardImage = 'images/no-image.png';
             let cardName = data.products[index].name;
             let cardPrice = data.products[index].salePrice;
-            $('.searchResults').append(createCard(cardImage, cardName, cardPrice));
+            $('.searchResults').append(createBestBuyCard(cardImage, cardName, cardPrice));
           }
           else{
             let cardImage = data.products[index].image;
             let cardName = data.products[index].name;
             let cardPrice = data.products[index].salePrice;
-            $('.searchResults').append(createCard(cardImage, cardName, cardPrice));
+            $('.searchResults').append(createBestBuyCard(cardImage, cardName, cardPrice));
           }
         });
       }
