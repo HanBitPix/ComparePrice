@@ -40,8 +40,8 @@ $('#searchButton').on('click', function(e){
     walmartCall();
   }else{
     $('#bestBuyButton').removeClass('disabled');
-    // bestBuyCall();
-    // walmartCall();
+    bestBuyCall();
+    walmartCall();
   }
 });
 
