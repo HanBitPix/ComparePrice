@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>ComparePrices</title>
+    <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="main.css" type="text/css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div class="container text-center">
+
+      <!-- jumbotron -->
+      <div class="jumbotron-fluid mt-5 mb-4">
+        <h1 class="display-4">Compare Prices</h1>
+        <p class="lead">Find the best prices from Amazon, BestBuy, Walmart</p>
+      </div>
+      <!-- /junbotron -->
+      
+      <!-- Categories -->
+      <div class="row">
+        <div class="category mx-auto btn-group btn-group-lg mb-4" role="group" aria-label="Category">
+          <button type="button" class="btn btn-outline-dark">Books</button>
+          <button type="button" class="btn btn-outline-dark">Games</button>
+          <button type="button" class="active btn btn-outline-dark">Movies</button>
+        </div>
+      </div> <!-- /Categories -->
+    
+      <hr> 
+
+        <div class="col-sm-12 my-5">
+          <h2 class="text-center">Search for Books</h2>
+        </div>
+  
+        <form>
+            <div class="input-group-lg my-5">
+              <input class="col-sm-12 form-control mb-3" type="search" id="search"
+                placeholder="Search..." aria-label="Search">
+              <button id="searchButton" class="btn-lg btn-dark col-sm-12" type="submit">Search</button>
+            </div>
+        </form>
+
+      <!-- Categories -->
+      <div class="row">
+          <div class="mx-auto btn-group btn-group-lg mb-5" role="group" aria-label="Category">
+            <button type="button" id="allStores" class="btn btn-outline-dark">All</button>
+            <button type="button" id="amazonButton" class="btn disabled btn-outline-dark">Amazon</button>
+            <button type="button" id="bestBuyButton" class="btn btn-outline-dark">Best Buy</button>
+            <button type="button" class="btn disabled btn-outline-dark">WalMart</button>
+          </div>
+        </div> <!-- /Categories -->
+      
+
+         <!-- Search Results -->  
+          <div class="row searchResults">
+           
+          </div>
+          <!-- /Search Results -->
+
+
+      </div> <!-- End of div container -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <script src="bestbuy.js"></script>
+  </body>
+</html>
