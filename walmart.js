@@ -18,7 +18,7 @@ const walmartCall = function(){
     searchCategory = 3920;
   }
   $.ajax({
-    url: 'http://api.walmartlabs.com/v1/search', 
+    url: 'https://api.walmartlabs.com/v1/search', 
     type: 'GET',
     data:{
       query: searchValue,

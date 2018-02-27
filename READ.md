@@ -1,4 +1,4 @@
-This App will allow you to search books, movie, games and compare prices from both Amazon and eBay
+  This App will allow you to search books, movie, games and compare prices from both Amazon and eBay
 
 // GitHub Repo:
 https://github.com/HanBitPix/ComparePrice
