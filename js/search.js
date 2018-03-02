@@ -11,7 +11,7 @@ const imageSearch = function(modelNumber, idNum){
     dataType: 'JSON',
     type: 'GET',
     data:{
-      key: 'AIzaSyCE045-TJH8I_VJOD7nW2PNRzSqr8ItfBI',
+      key: 'AIzaSyAVcOT1p5bkAnfm4jT-_A-o-eIaKEmNeHE',
       q: modelNumber,
       client: 'google-csbe',
       cx: '008975268109802782687:7h6c926txfm',
@@ -19,21 +19,13 @@ const imageSearch = function(modelNumber, idNum){
     },
     success: function(data) {
       console.log(data);
-      let arrayImage = [];
       let imageHTML = '';
 
       $.each(data.items, function(index, item){
-        arrayImage.push(data.items[index].link);
-
-       
+        let imageLink = data.items[index].link;
+        imageHTML = `<a href="${imageLink}" target="_blank"><img class="img-thumbnail float-left" src="${imageLink}"/></a>`;
+        $(`.${idNum}`).append(imageHTML);
       });
-      console.log(arrayImage);
-
-      for (let i = 0; i < arrayImage.length; i++){
-        imageHTML += `<a href="${arrayImage[i]}" target="_blank"><img class="img-thumbnail float-left" src="${arrayImage[i]}"/></a>`;
-      }
-
-      $(`.${idNum}`).append(imageHTML);
 
     } // End of Success
   }); // End of Ajax Call

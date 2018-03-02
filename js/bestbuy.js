@@ -25,7 +25,7 @@ const bestBuyCall = function(){
     data:{
       apiKey: 'vrjst2v5zsgemp3jq44xwmz9',
       format: 'json',
-      pageSize: 20,
+      pageSize: 1,
       page: 1
     },
     success: function(data) {
@@ -74,7 +74,7 @@ const bestBuyCall = function(){
         let specialSku2 = `image-search${bestBuyData.sku}`; 
 
         imageSearch(bestBuyData.modelNumber, specialSku2);
-        youtubeVideo(bestBuyData.modelNumber, specialSku);
+        // youtubeVideo(bestBuyData.modelNumber, specialSku);
         
       }); // End of each
     }
