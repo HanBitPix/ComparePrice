@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Barlow', sans-serif;
+}
+
+
+.bg-yellow{
+  background-color: rgb(255, 255, 115);
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
+
+img{
+ max-height: 300px;
+ width: 50%;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.card-header{
+  padding: .2rem;
+}
+
+.card-body{
+  padding: 0rem;
+}
+
+.checked {
+  color: red;
+}
+
+
+/* XS */
+@media screen and (min-width: 576px){
+  img{
+    max-height: 250px;
+    width: 60%;
+   }
+}
+/* SM */
+@media screen and (min-width: 768px){
+  img{
+    width: 50%;
+   }
+}
+/* MD */
+@media screen and (min-width: 992px){
+ 
+}
+/* LG */
+@media screen and (min-width: 1200px){
+  
+}

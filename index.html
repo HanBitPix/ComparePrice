@@ -4,33 +4,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>ComparePrices</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <link href="main.css" type="text/css" rel="stylesheet">
+    <link href="css/main.css" type="text/css" rel="stylesheet">
   </head>
   <body class="bg-light">
     <div class="container text-center">
 
       <!-- jumbotron -->
       <div class="jumbotron-fluid mt-5 mb-4">
-        <h1 class="display-4">Compare Prices</h1>
-        <p class="lead">Find the best prices from Amazon, BestBuy, Walmart</p>
+        <h1 class="display-4">Product Check</h1>
+        <p class="lead">Find Detailed Product Info</p>
       </div>
       <!-- /junbotron -->
       
       <!-- Categories -->
       <div class="row">
         <div class="category mx-auto btn-group btn-group-lg mb-4" role="group" aria-label="Category">
-          <button type="button" class="btn btn-outline-dark">Books</button>
-          <button type="button" class="btn btn-outline-dark">Games</button>
-          <button type="button" class="active btn btn-outline-dark">Movies</button>
+          <button type="button" class="active btn btn-outline-dark">Laptops</button>
+          <button type="button" class="btn btn-outline-dark">Phones</button>
+          <button type="button" class="btn btn-outline-dark">Tablets</button>
         </div>
       </div> <!-- /Categories -->
     
       <hr> 
 
         <div class="col-sm-12 my-5">
-          <h2 class="text-center">Search for Books</h2>
+          <h2 class="text-center search-title">Search for Laptops</h2>
         </div>
   
         <form>
@@ -40,29 +41,25 @@
               <button id="searchButton" class="btn-lg btn-dark col-sm-12" type="submit">Search</button>
             </div>
         </form>
-
-      <!-- Categories -->
-      <div class="row">
-          <div class="mx-auto btn-group btn-group-lg mb-5" role="group" aria-label="Category">
-            <button type="button" id="allStores" class="btn btn-outline-dark">All</button>
-            <button type="button" id="amazonButton" class="btn disabled btn-outline-dark">Amazon</button>
-            <button type="button" id="bestBuyButton" class="btn btn-outline-dark">Best Buy</button>
-            <button type="button" class="btn disabled btn-outline-dark">WalMart</button>
-          </div>
-        </div> <!-- /Categories -->
       
-
-         <!-- Search Results -->  
-          <div class="row searchResults">
-           
-          </div>
-          <!-- /Search Results -->
-
-
+        <!-- Search Results -->  
+        <div class="row searchResults">
+      
+          
+              
+              
+         
+        </div> <!-- // Search Results -->
       </div> <!-- End of div container -->
+
+
+      
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="index.js"></script>
-    <script src="bestbuy.js"></script>
-    <script src="walmart.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"> m </script>
+    <script src="js/index.js"></script>
+    <script src="js/createcard.js"></script>
+    <script src="js/bestbuy.js"></script>
+    <script src="js/youtube.js"></script>
+    <script src="js/search.js"></script>
   </body>
 </html>
