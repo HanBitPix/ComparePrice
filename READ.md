@@ -7,6 +7,12 @@ This App will allow you to search "electronics" [Laptops, Phones, Tablest] from 
 <h4> GitHub Repo: https://github.com/HanBitPix/ComparePrice </h4>
 <h4> Live Demo: https://hanbitpix.github.io/ProductCheck/ </h4>
 
+
+<h3>APIs</h3>
+<h4>BestBuy API</h4>
+<h4>YouTube API</h4>
+<h4>Google Custom Search API</h4>
+
 <h2> Step by step Guide with Screenshot </h2>
 
 <h3>Step 1</h3>
