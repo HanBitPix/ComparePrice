@@ -1,8 +1,8 @@
 'use strict';
 
-// Best Buy Ajax Call
-
-// $('#allStores, #bestBuyButton').on('click', function(e){
+// -------------------------------------------------- //
+// Google Custom Image Search API Call                //
+// -------------------------------------------------- //
 
 const imageSearch = function(modelNumber, idNum){
 
@@ -19,13 +19,15 @@ const imageSearch = function(modelNumber, idNum){
     },
     success: function(data) {
       console.log(data);
+      // To hold the HTML for all the images for the product
       let imageHTML = '';
 
+      // Loops through the total results for the images
       $.each(data.items, function(index, item){
         let imageLink = data.items[index].link;
-        imageHTML = `<a href="${imageLink}" target="_blank"><img class="img-thumbnail float-left" src="${imageLink}"/></a>`;
+        imageHTML = `<a role="link" href="${imageLink}" target="_blank"><img class="img-thumbnail float-left" src="${imageLink}"/></a>`;
         $(`.${idNum}`).append(imageHTML);
-      });
+      }); // End of each loop
 
     } // End of Success
   }); // End of Ajax Call

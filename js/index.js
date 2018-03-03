@@ -14,6 +14,7 @@ $('.category button').on('click',function(e){
   console.log($(this).text());
   selectedCategory = $(this).text();
 
+  // Checks to see selected category than the header category will change
   if (selectedCategory === 'Laptops'){
     $('.search-title').text('Search for Laptops');
   }
@@ -23,6 +24,8 @@ $('.category button').on('click',function(e){
   else {
     $('.search-title').text('Search for Tablets');
   }
+
+  // Returns current selected category
   return selectedCategory;
 });
 
@@ -30,6 +33,7 @@ $('.category button').on('click',function(e){
 // User searching for item                            //
 // -------------------------------------------------- //
 
+// Empty Search Value Default
 let searchValue = ''; 
 
 $('#searchButton').on('click', function(e){

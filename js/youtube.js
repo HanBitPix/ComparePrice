@@ -3,7 +3,9 @@
 // Youtube Search URL
 const YT_SEARCH_URL = 'https://www.googleapis.com/youtube/v3/search';
 
-
+// -------------------------------------------------- //
+// YouTube API Call                                   //
+// -------------------------------------------------- //
 
 const youtubeVideo = function(modelNumber, idNumber){
 
@@ -19,11 +21,16 @@ const youtubeVideo = function(modelNumber, idNumber){
       type: 'video'
     },
     success: function(data) {
+
+      // Puts the link for the first video found into the variable
       let videoID = data.items[0].id.videoId;
+
+      // Creates the html and puts the videID variable inside it
       let youtube = `<iframe width="100%" height="360" src="https://www.youtube.com/embed/${videoID}?controls=1"></iframe>`;
-      console.log(youtube);
-      
+
+      // Puts the video html into the body modal of the review
       $('.modal-review').parent('.card-header').find(`.${idNumber}`).append(youtube);
-    }
+      
+    } // End of Success
   }); // End of Ajax Call
-}; 
+}; // End of Function

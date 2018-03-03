@@ -2,9 +2,9 @@
 
 // Best Buy Ajax Call
 
-// $('#allStores, #bestBuyButton').on('click', function(e){
 const bestBuyCall = function(){
 
+  // Checks to see the current set category
   if(selectedCategory === 'Laptops'){
     console.log('its laptops');
     selectedCategory = 'Laptop_Computers';
@@ -17,6 +17,7 @@ const bestBuyCall = function(){
     console.log('its tablets');
     selectedCategory = 'Tablets';
   }
+  // --------------------------------------
 
   $.ajax({
     url: `https://api.bestbuy.com/v1/products(name=${searchValue}*&productTemplate=${selectedCategory})`, //&productTemplate=${selectedCategory})
@@ -33,10 +34,12 @@ const bestBuyCall = function(){
       console.log(data.products);
          
       $.each(data.products, function(index, item){
-
         let cardImage = '';
+
+        // Will hold all of the product data
         let bestBuyData = {};
         
+        // Checks to see if the product has an image or not
         if (data.products[index].image === null){
           cardImage = 'images/no-image.png';
           bestBuyData.cardImage = cardImage;
@@ -45,8 +48,8 @@ const bestBuyCall = function(){
           bestBuyData.cardImage = cardImage;
         }
 
+        // Retrieving Data and inputing as an Object
         bestBuyData.modelNumber = data.products[index].modelNumber;
-
         bestBuyData.productDescription = data.products[index].longDescription;
         bestBuyData.cardName = data.products[index].name;
         bestBuyData.cardPrice = data.products[index].salePrice;
@@ -60,23 +63,27 @@ const bestBuyCall = function(){
         bestBuyData.mobileOperatingSystem = data.products[index].mobileOperatingSystem;
         bestBuyData.weight = data.products[index].weight;
         bestBuyData.warranty = data.products[index].warrantyLabor;
-
         // Dimensions
         bestBuyData.width = data.products[index].width;
         bestBuyData.height = data.products[index].height;
         bestBuyData.depth = data.products[index].depth;     
 
+        // Special Class Name for the modal body to place the video
         let specialSku = `youtube-body${bestBuyData.sku}`;
         
-        
+        // Will input all the BestBuy Data into creating the product card
         $('.searchResults').append(createCard(bestBuyData));
         
+        // Special Class Name for the modal body to place the images
         let specialSku2 = `image-search${bestBuyData.sku}`; 
 
+        // Calling the Google Custom Search API to retrieve images
         imageSearch(bestBuyData.modelNumber, specialSku2);
-        // youtubeVideo(bestBuyData.modelNumber, specialSku);
-        
+
+        // Calling the YouTube API to retrieve video for each product
+        youtubeVideo(bestBuyData.modelNumber, specialSku);
+      
       }); // End of each
-    }
+    } // End of Success
   }); // End of Ajax Call
 }; // End Best Buy Search

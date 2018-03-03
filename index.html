@@ -4,62 +4,59 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>ComparePrices</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="css/main.css" type="text/css" rel="stylesheet">
   </head>
-  <body class="bg-light">
+  <body role="document" class="bg-light">
     <div class="container text-center">
 
       <!-- jumbotron -->
       <div class="jumbotron-fluid mt-5 mb-4">
-        <h1 class="display-4">Product Check</h1>
+        <h1 role="heading" class="display-3">Product Check</h1>
         <p class="lead">Find Detailed Product Info</p>
       </div>
-      <!-- /junbotron -->
+      <!-- // junbotron -->
       
       <!-- Categories -->
       <div class="row">
         <div class="category mx-auto btn-group btn-group-lg mb-4" role="group" aria-label="Category">
-          <button type="button" class="active btn btn-outline-dark">Laptops</button>
-          <button type="button" class="btn btn-outline-dark">Phones</button>
-          <button type="button" class="btn btn-outline-dark">Tablets</button>
+          <button role="button" type="button" class="active btn btn-outline-dark">Laptops</button>
+          <button role="button" type="button" class="btn btn-outline-dark">Phones</button>
+          <button role="button" type="button" class="btn btn-outline-dark">Tablets</button>
         </div>
-      </div> <!-- /Categories -->
+      </div> 
+      <hr role="separator"> 
+      <!-- // Categories -->
+
+      <!-- Search Bar -->
+      <div class="col-sm-12 my-5">
+        <h2 role="heading" class="text-center search-title">Search for Laptops</h2>
+      </div>
+      <form role=form>
+          <div class="input-group-lg my-5">
+            <input role="searchbox" class="col-sm-12 form-control mb-3" type="search" id="search"
+              placeholder="Search..." aria-label="Search">
+            <button role="button" id="searchButton" class="btn-lg btn-dark col-sm-12" type="submit">Search</button>
+          </div>
+      </form>
+      <!-- // Search Bar -->
     
-      <hr> 
+      <!-- Search Results -->  
+      <div class="row searchResults">
+        <!-- the search result will go in here -->
+      </div> 
+      <!-- // Search Results -->
+    </div> <!-- // End of div container -->
 
-        <div class="col-sm-12 my-5">
-          <h2 class="text-center search-title">Search for Laptops</h2>
-        </div>
-  
-        <form>
-            <div class="input-group-lg my-5">
-              <input class="col-sm-12 form-control mb-3" type="search" id="search"
-                placeholder="Search..." aria-label="Search">
-              <button id="searchButton" class="btn-lg btn-dark col-sm-12" type="submit">Search</button>
-            </div>
-        </form>
-      
-        <!-- Search Results -->  
-        <div class="row searchResults">
-      
-          
-              
-              
-         
-        </div> <!-- // Search Results -->
-      </div> <!-- End of div container -->
-
-
-      
+    <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"> m </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/createcard.js"></script>
     <script src="js/bestbuy.js"></script>
     <script src="js/youtube.js"></script>
     <script src="js/search.js"></script>
+    <!-- // Scripts -->
   </body>
 </html>
