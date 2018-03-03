@@ -38,11 +38,11 @@ This App will allow you to search "electronics" [Laptops, Phones, Tablest] from 
 <ul>
   <li>HTML</li>
   <li>CSS</li>
-   <ul> Library
+   <ul> 
     <li>Bootstrap</li>
    </ul>
   <li>JS</li>
-  <ul> Library
+  <ul>
     <li>jQuery</li>
   </ul>
  </ul>
