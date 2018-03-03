@@ -26,7 +26,7 @@ const bestBuyCall = function(){
     data:{
       apiKey: 'vrjst2v5zsgemp3jq44xwmz9',
       format: 'json',
-      pageSize: 1,
+      pageSize: 10,
       page: 1
     },
     success: function(data) {
