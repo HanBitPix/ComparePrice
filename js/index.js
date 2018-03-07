@@ -11,7 +11,6 @@ $('.category button').on('click',function(e){
   e.preventDefault();
   $('.category button').removeClass('active');
   $(this).addClass('active');
-  console.log($(this).text());
   selectedCategory = $(this).text();
 
   // Checks to see selected category than the header category will change
@@ -47,9 +46,6 @@ $('#searchButton').on('click', function(e){
 
   // Resets the search input
   $('#search').val('');
-
-  // Logs users search value
-  console.log(`User searching for: ${searchValue}`);
 
   // Calling BestBuy API
   bestBuyCall();

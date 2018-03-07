@@ -11,14 +11,13 @@ const imageSearch = function(modelNumber, idNum){
     dataType: 'JSON',
     type: 'GET',
     data:{
-      key: 'AIzaSyAVcOT1p5bkAnfm4jT-_A-o-eIaKEmNeHE',
+      key: 'AIzaSyCAUWDxfSqkVGpNt_797Fze1NxeD9M8Ssc',
       q: modelNumber,
       client: 'google-csbe',
       cx: '008975268109802782687:7h6c926txfm',
       searchType: 'image'
     },
     success: function(data) {
-      console.log(data);
       // To hold the HTML for all the images for the product
       let imageHTML = '';
 

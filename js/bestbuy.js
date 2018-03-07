@@ -6,15 +6,12 @@ const bestBuyCall = function(){
 
   // Checks to see the current set category
   if(selectedCategory === 'Laptops'){
-    console.log('its laptops');
     selectedCategory = 'Laptop_Computers';
   } 
   else if(selectedCategory === 'Phones'){
-    console.log('its phones');
     selectedCategory = 'Cell_Phones';
   }
   else if(selectedCategory === 'Tablets'){
-    console.log('its tablets');
     selectedCategory = 'Tablets';
   }
   // --------------------------------------
@@ -30,8 +27,7 @@ const bestBuyCall = function(){
       page: 1
     },
     success: function(data) {
-      console.log(data);
-      console.log(data.products);
+      
          
       $.each(data.products, function(index, item){
         let cardImage = '';
